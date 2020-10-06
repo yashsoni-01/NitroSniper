@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\http.py", line 291, in static_login
+    data = await self.request(Route('GET', '/users/@me'))
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\http.py", line 245, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: 401 Unauthorized (error code: 0): 401: Unauthorized
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yashs\OneDrive\Documents\GitHub\NitroSniper\sniper.py", line 119, in <module>
+    bot.run(token, bot=False)
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\client.py", line 708, in run
+    return future.result()
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\client.py", line 687, in runner
+    await self.start(*args, **kwargs)
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\client.py", line 650, in start
+    await self.login(*args, bot=bot)
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\client.py", line 499, in login
+    await self.http.static_login(token.strip(), bot=bot)
+  File "C:\Users\yashs\AppData\Local\Programs\Python\Python38-32\lib\site-packages\discord\http.py", line 295, in static_login
+    raise LoginFailure('Improper token has been passed.') from exc
+discord.errors.LoginFailure: Improper token has been passed.
